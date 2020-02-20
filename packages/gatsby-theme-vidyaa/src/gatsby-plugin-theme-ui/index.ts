@@ -312,11 +312,13 @@ const theme = {
     },
   },
   layout: {
-    root_main: {
-      bg: `background`,
-    },
-    root_blogpages: {
-      bg: `gray.2`,
+    blogpage: {
+      ...tailwind.styles.Main,
+      bg: tailwind.colors.gray[2],
+      mt: `auto`,
+      width: `100%`,
+      flex: `1 1 auto`,
+      position: `relative`,
     },
     header: {
       width: `100%`,

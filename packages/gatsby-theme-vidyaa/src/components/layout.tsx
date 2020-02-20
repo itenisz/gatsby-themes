@@ -20,12 +20,7 @@ type Types = {
 // As this component wraps every page (due to the wrapPageElement API) we can be sure to have
 // the locale available everywhere!
 const Layout = ({ children, pageContext }: Types) => {
-  const { locale, pageGroupName } = pageContext
-
-  // main is the index page, use different variant on other pages
-  const blogPage = pageGroupName === `blog` || pageGroupName === `blog_generated`
-  const variant_layout_root = blogPage ? `layout.root_blogpages` : `layout.root_main`
-
+  const { locale } = pageContext
   const mdxComponents = {
     a: MdxLink,
     MdxEmbed,
@@ -76,7 +71,6 @@ const Layout = ({ children, pageContext }: Types) => {
               flexDirection: `column`,
               // set this to `minHeight: '100vh'` for full viewport height
               minHeight: `100vh`,
-              variant: variant_layout_root,
             }}
           >
             <MDXProvider components={{ ...mdxComponents }}>{children}</MDXProvider>

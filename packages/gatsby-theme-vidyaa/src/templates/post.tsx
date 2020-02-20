@@ -8,7 +8,7 @@ import { Container } from '../components/container-main'
 
 const Post = ({ data: { mdx } }: any) => (
   <LayoutPages withScrollSpy={false} pageGroupName="blog">
-    <Box id="mdx_post" sx={{ variant: `layout.main` }}>
+    <Box id="mdx_post" sx={{ variant: `layout.blogpage` }}>
       <Box id="top">
         <ParallaxHeader height="75vh" />
       </Box>

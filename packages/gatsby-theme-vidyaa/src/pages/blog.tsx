@@ -21,7 +21,7 @@ const Index = ({ data: { blog }, pageContext }: Types) => {
 
   return (
     <LayoutPages withScrollSpy={false} pageGroupName={pageGroupName}>
-      <Box id="page_blog" sx={{ variant: `layout.main` }}>
+      <Box id="page_blog" sx={{ variant: `layout.blogpage` }}>
         <Box id="top">
           <ParallaxHeader height="75vh" />
         </Box>
