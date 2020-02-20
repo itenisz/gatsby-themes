@@ -23,7 +23,8 @@ const Layout = ({ children, pageContext }: Types) => {
   const { locale, pageGroupName } = pageContext
 
   // main is the index page, use different variant on other pages
-  const variant_layout_root = pageGroupName === `main` ? `layout.main` : `layout.pages`
+  const blogPage = pageGroupName === `blog` || pageGroupName === `blog_generated`
+  const variant_layout_root = blogPage ? `layout.root_blogpages` : `layout.root_main`
 
   const mdxComponents = {
     a: MdxLink,

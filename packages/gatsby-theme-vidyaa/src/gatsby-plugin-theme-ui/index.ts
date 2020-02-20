@@ -312,10 +312,10 @@ const theme = {
     },
   },
   layout: {
-    main: {
+    root_main: {
       bg: `background`,
     },
-    pages: {
+    root_blogpages: {
       bg: `gray.2`,
     },
     header: {

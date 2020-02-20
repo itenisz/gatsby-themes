@@ -294,8 +294,8 @@ exports.createPages = async ({ graphql, actions }, themeOptions) => {
         // we know that its programmatically generated
         const grandParentDir = post.childMdx.fields.grandParentDir
         const pageType = `generated`
-        // pageGroupName is like `blog-generated`
-        const pageGroupName = `${grandParentDir}-${pageType}`
+        // pageGroupName is like `blog_generated`
+        const pageGroupName = `${grandParentDir}_${pageType}`
 
         createPage({
           path: localizedSlug({ isDefault, locale, slug }),
