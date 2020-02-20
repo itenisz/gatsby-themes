@@ -1,0 +1,17 @@
+transNavbar:
+  - groupname: main
+    elements:
+    - name: Blog
+      link: "/blog"
+    - name: Rólam
+      link: "#about"
+    - name: Árak
+      link: "#prices"
+    - name: Kapcsolat
+      link: "#contact"
+  - groupname: blog
+    elements:
+    - name: Főoldal
+      link: "/"
+    - name: Rólam
+      link: "/#about"

@@ -1,0 +1,32 @@
+transLinks:
+  - groupname: main
+    elements:
+    - name: linkReviews
+      trans: "Reviews - more than 200 review"
+      url: "https://www.reviews.com"
+    - name: linkPictures
+      trans: "Pictures"
+      url: "https://unsplash.com"
+    - name: linkVideos
+      trans: "Videos"
+      url: "https://www.youtube.com"
+    - name: linkMap
+      trans: "Open on Map"
+      url: "https://www.google.com/maps/place/Budapest,+Andr%C3%A1ssy+%C3%BAt+39,+1061/@47.503694,19.0593343,17z/data=!3m1!4b1!4m5!3m4!1s0x4741dc6c2200db9f:0x2c7737ed0693f7a6!8m2!3d47.503694!4d19.061523"
+    - name: linkBooking
+      trans: "Booking"
+      url: "https://www.booking.com"
+    - name: linkFacebook
+      trans: "Facebook"
+      url: "https://www.facebook.com"
+    - name: linkInstagram
+      trans: "Instagram"
+      url: "https://www.instagram.com"
+    - name: linkEmail
+      trans: "Email"
+      url: "mailto:ipsum@lorem.org"
+  - groupname: blog
+    elements:
+    - name: linkEmail
+      trans: "Email"
+      url: "mailto:ipsum@lorem.org"

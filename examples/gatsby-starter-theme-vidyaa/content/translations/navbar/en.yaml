@@ -1,0 +1,17 @@
+transNavbar:
+  - groupname: main
+    elements:
+    - name: Blog
+      link: "/blog"
+    - name: About
+      link: "#about"
+    - name: Prices
+      link: "#prices"
+    - name: Contact
+      link: "#contact"
+  - groupname: blog
+    elements:
+    - name: Home
+      link: "/"
+    - name: About
+      link: "/#about"

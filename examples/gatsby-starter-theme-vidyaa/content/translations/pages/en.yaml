@@ -1,0 +1,20 @@
+transPages:
+  - groupname: main
+    elements:
+    - name: hello
+      trans: "Hello and welcome to this multilangual site!"
+    - name: subline
+      trans: "Have a nice day!"
+    - name: backToHome
+      trans: "Back to home"
+    - name: address
+      trans: "1061. Budapest, Andrássy út 39."
+    - name: addressLineTwo
+      trans: "Ipsum on doorbell"
+    - name: tel
+      trans: "+36 30 456 7890"
+  - groupname: blog
+    elements:
+    - name: hello
+      trans: "Hello and welcome to this multilangual blog!"
+

@@ -1,0 +1,19 @@
+transPages:
+  - groupname: main
+    elements:
+    - name: hello
+      trans: "Helló, üdvözöllek ezen a többnyelvű oldalon!"
+    - name: subline
+      trans: "Legyen szép napod!"
+    - name: backToHome
+      trans: "Vissza a kezdőoldalra"
+    - name: address
+      trans: "1061. Budapest, Andrássy út 39."
+    - name: addressLineTwo
+      trans: "Ipsum feliratú kapucsengő"
+    - name: tel
+      trans: "+36 30 456 7890"
+  - groupname: blog
+    elements:
+    - name: hello
+      trans: "Helló, üdvözöllek ezen a többnyelvű blogon!"
