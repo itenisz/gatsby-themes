@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.7] - 2020-02-22
+
+### Note
+
+- more configurable components for easier shadowing
+
+- optional navbar logo, welcome message, and scrollspy offset settings
+
+- parallax heights come from theme-ui settings now
+
+- no pageGroupName request from pageContext because it seems unreliable with the offline plugin, this needs further testing
+
+- better readme and descriptions, live preview link
+
 ## [0.8.6] - 2020-02-20
 
 ### Note

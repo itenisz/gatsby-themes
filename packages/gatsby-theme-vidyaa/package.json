@@ -1,9 +1,9 @@
 {
   "private": false,
   "name": "@itenisz/gatsby-theme-vidyaa",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "author": "@itenisz",
-  "description": "Gatsby i18n site theme using MDX and dependency-free i18n",
+  "description": "Gatsby Theme Vidyaa - i18n theme using MDX and Theme-ui by @itenisz",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {

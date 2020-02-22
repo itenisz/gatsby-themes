@@ -13,6 +13,10 @@ type TypesBoxMdx = {
   variant?: string
 }
 
+type contAboutTypes = {
+  needWelcome?: boolean
+}
+
 const BoxWelcome = () => {
   const { hello } = useTranslations() as Itranslations
   return (
@@ -22,13 +26,13 @@ const BoxWelcome = () => {
   )
 }
 
-export const BoxMdx = ({ locale, dir, minHeight = `45vh`, variant = `mdx.boxmain`, ...props }: TypesBoxMdx) => (
+const BoxMdx = ({ locale, dir, minHeight = `45vh`, variant = `mdx.boxmain`, ...props }: TypesBoxMdx) => (
   <Box {...props} sx={{ minHeight }}>
     <MdxPage locale={locale} dir={dir} variant={variant} />
   </Box>
 )
 
-export const Container = ({ ...props }) => (
+const Container = ({ ...props }) => (
   <Flex
     sx={{
       justifyContent: `center`,
@@ -48,18 +52,18 @@ export const Container = ({ ...props }) => (
   </Flex>
 )
 
-export const ContAbout = ({ ...props }) => {
+const ContAbout = ({ needWelcome = true, ...props }: contAboutTypes) => {
   const { locale } = React.useContext(LayoutContext)
   const dir = `main/about`
   return (
     <Container>
-      <BoxWelcome />
+      {needWelcome ? <BoxWelcome /> : null}
       <BoxMdx locale={locale} dir={dir} {...props} />
     </Container>
   )
 }
 
-export const ContPrices = ({ ...props }) => {
+const ContPrices = ({ ...props }) => {
   const { locale } = React.useContext(LayoutContext)
   const dir = `main/prices`
   return (
@@ -74,7 +78,7 @@ export const ContPrices = ({ ...props }) => {
   )
 }
 
-export const ContContact = ({ ...props }) => {
+const ContContact = ({ ...props }) => {
   const { locale } = React.useContext(LayoutContext)
   const dir = `main/contact`
   return (
@@ -83,3 +87,5 @@ export const ContContact = ({ ...props }) => {
     </Container>
   )
 }
+
+export { BoxWelcome, BoxMdx, Container, ContAbout, ContPrices, ContContact }

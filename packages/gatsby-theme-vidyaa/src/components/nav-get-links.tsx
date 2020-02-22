@@ -17,6 +17,7 @@ type navGetLinkType = {
 
 type navGetLinksType = {
   withScrollSpy?: boolean
+  offsetScrollSpy?: number
   pageGroupName: string
 }
 
@@ -52,7 +53,7 @@ const NavGetLink = ({ withScrollSpy = true, item }: navGetLinkType) => {
   )
 }
 
-const NavGetLinks = ({ withScrollSpy = true, pageGroupName = `main` }: navGetLinksType) => {
+const NavGetLinks = ({ withScrollSpy = true, offsetScrollSpy = -150, pageGroupName = `main` }: navGetLinksType) => {
   const { elements } = useTransNavbar(pageGroupName)
 
   //  const scrollspyItems = ['home','about', 'prices', 'contact']
@@ -65,7 +66,7 @@ const NavGetLinks = ({ withScrollSpy = true, pageGroupName = `main` }: navGetLin
           items={scrollspyItems}
           currentClassName="navLinkActiveClass"
           componentTag="div"
-          offset={-50}
+          offset={offsetScrollSpy}
           style={{ display: `flex` }}
         >
           {elements.map((item: any) => (

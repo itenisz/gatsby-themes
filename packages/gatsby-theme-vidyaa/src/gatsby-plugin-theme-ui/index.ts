@@ -144,9 +144,9 @@ const theme = {
     },
   },
   parallax: {
-    heightHeader: [`45vh`, `55vh`, `70vh`, `70vh`],
-    heightMain: [`40vh`, `55vh`, `70vh`, `70vh`],
-    heightFooter: [`50vh`, `75vh`, `80vh`, `85vh`],
+    heightHeader: `75vh`,
+    heightMain: `75vh`,
+    heightFooter: `75vh`,
     parallaxInner: {
       flexDirection: [`column`, `row`],
       justifyContent: `space-around`,

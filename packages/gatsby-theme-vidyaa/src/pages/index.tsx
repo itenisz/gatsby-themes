@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box } from 'theme-ui'
+import theme from '../gatsby-plugin-theme-ui'
 import { LayoutPages } from '../components/layout-pages'
 import { ParallaxHeader, ParallaxMainOne, ParallaxMainTwo, ParallaxFooter } from '../components/parallax-main'
 import { ContAbout, ContPrices, ContContact } from '../components/container-main'
@@ -10,34 +11,34 @@ export type Types = {
   pageContext: pageContextTypes
 }
 
-const Index = ({ pageContext }: Types) => {
-  const { pageGroupName } = pageContext
-
-  return (
-    <LayoutPages withScrollSpy={true} pageGroupName={pageGroupName}>
-      <Box id="page_main" sx={{ variant: `layout.main` }}>
-        <Box
-          sx={{
-            display: `grid`,
-            gridGap: 0,
-          }}
-        >
-          <Box id="top">
-            <ParallaxHeader />
-          </Box>
-          <ContAbout id="about" />
-          <ParallaxMainOne />
-          <ContPrices id="prices" />
-          <ParallaxMainTwo />
-          <Box id="contact">
-            <ContContact />
-            <ContactBlock />
-          </Box>
-          <ParallaxFooter />
+const Index = ({ pageContext }: Types) => (
+  <LayoutPages withScrollSpy={true} pageGroupName="main">
+    <Box id="page_main" sx={{ variant: `layout.main` }}>
+      <Box
+        sx={{
+          display: `grid`,
+          gridGap: 0,
+        }}
+      >
+        <Box id="top">
+          <ParallaxHeader height={theme.parallax.heightHeader} />
         </Box>
+        <Box id="about">
+          <ContAbout />
+        </Box>
+        <ParallaxMainOne height={theme.parallax.heightMain} />
+        <Box id="prices">
+          <ContPrices />
+        </Box>
+        <ParallaxMainTwo height={theme.parallax.heightMain} />
+        <Box id="contact">
+          <ContContact />
+          <ContactBlock />
+        </Box>
+        <ParallaxFooter height={theme.parallax.heightFooter} />
       </Box>
-    </LayoutPages>
-  )
-}
+    </Box>
+  </LayoutPages>
+)
 
 export default Index

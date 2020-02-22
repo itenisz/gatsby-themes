@@ -12,24 +12,40 @@ The packages are still in heavy development, If I found better solution to any p
 
 ## The goal of this project
 
-I started this to learn to work with the newest technologies and maintain high quality of coding standards. I especially wanted to work with multilangual enviroment, because thats not an easy task to do. Try it for yourself and you will see why. Before start, I was unable to find any other example which is working with mdx, theme-ui and i18n and the topic of i18n solutions was very confusing with many different aproaches.
+I started this to learn to work with the newest technologies and maintain high quality of coding standards. I especially wanted to work with multilingual environment, because that's not an easy task to do. Try it for yourself and you will see why. Before start, I was unable to find any other example which is working with mdx, theme-ui and i18n and the topic of i18n solutions was very confusing with many different approaches.
 
-So I made my own solution, based on the official Gatsby i18n example, without using any outside i18n libraries, only with GraphQL queries (In the future I may create versions with the great i18n libraries like react-intl or i18next). On the top of that, I decided to use Typescript, because it seems Typescript provides a lot of help to write a better code. For the Design System I use Theme-UI which I think is the best, and thats the future of frontend solutions in React and Gatsby. (Gatsby has official support to Theme-ui and they create a theme dev team to provide more higher level components in the future)
+So I made my own solution, based on the official Gatsby i18n example, without using any outside i18n libraries, only with GraphQL queries (In the future I may create versions with the great i18n libraries like react-intl or i18next). On the top of that, I decided to use Typescript, because it seems Typescript provides a lot of help to write a better code. For the Design System I use Theme-UI which I think is the best, and that's the future of frontend solutions in React and Gatsby. (Gatsby has official support to Theme-ui and they create a theme dev team to provide more higher level components in the future)
+
+## Special Thanks to some great developers
+
+They motivated me and showed a great way, how to handle development processes.
+
+- Thanks to **Brent Jackson** ([@jxnblk](https://jxnblk.com/)) the creator of Theme-ui, who is one of the greatest developers on this planet, I learned from him a lot about design principles. His Theme-ui is just amazing and reforms the whole approach to designing. I recommend to read his [blog](https://jxnblk.com/blog).
+
+- Thanks to **LekoArts** ([@LekoArts](https://www.lekoarts.de/)) creator of many high quality open source Gatsby Themes, and the original official Gatsby i18n example. He helps a lot in dev community on different forums and platforms. I learned a general approach to i18n from him, and about gatsby themes and his work encouraged me to use Typescript.
+
+- Thanks to **Jason Lengstorf** ([@jlengstorf](https://lengstorf.com/)) who is a really great guy, a great speaker, working a lot for dev community and constantly helping others. I learned from him a more open minded attitude to handle development and he shows great balance to maintain a healthier developer life.
+
+- Thanks to **Kristóf Poduszló** ([@kripod](https://github.com/kripod/)) who is following high quality coding standards as a computer engineer, I learned from him the importance of strict eslint and a new aproach to handle frontend with Design Systems like Rebass (by Brent Jackson).
 
 ## Origin of the name Vidyaa
 
 Its very funny, because I wanted to use a female name for it, so I used a female name generator and the random result was "Vidya".
-This name origins from the Sanskrit word "vidyā" which means "knowledge", and this whole project goal is gaining knowledge in development, so its a perfect name. I wroted as "vidyaa" because thats the correct Sanskrit transliteration.
+This name origins from the Sanskrit word "vidyā" which means "knowledge", and this whole project goal is gaining knowledge in development, so its a perfect name. I wrote as "vidyaa" because that's the correct Sanskrit transliteration.
 
 ## Features
 
 ### mdx
 
-- this is a new format which is allow to use react components inside markdown and that creates a lot of possibilites
+- this is a new format which is allow to use react components inside markdown and that creates a lot of possibilities
 
 ### theme-ui
 
-- extremly smart Design System made by Brent Jackson ( who is the creator of Rebass and Styled-system )
+- extremely smart Design System made by Brent Jackson ( who is the creator of Rebass and Styled-system )
+
+### full responsive
+
+- theme-ui is a great help to provide a full responsive design
 
 ### i18n
 
@@ -95,7 +111,11 @@ yarn add @itenisz/gatsby-starter-theme-vidyaa
 
 ### Gatsby Starter example
 
-Check the starter example here: [@itenisz/gatsby-starter-theme-vidyaa](https://github.com/itenisz/gatsby-themes/tree/master/examples/gatsby-starter-theme-vidyaa)
+Check these links:
+
+Standalone Github repo: [@itenisz/gatsby-starter-theme-vidyaa](https://github.com/itenisz/gatsby-starter-theme-vidyaa)
+
+Live Preview: [gatsby-theme-vidyaa.netlify.com](https://gatsby-theme-vidyaa.netlify.com/)
 
 
 ### Shadowing
@@ -106,7 +126,7 @@ You can read the official shadowing guide [Shadowing in Gatsby Themes](https://w
 
 To shadow the language config file, you need to copy the original version to your `src/@itenisz/gatsby-theme-vidyaa/config/cfg-languages.js`, then make changes in your version.
 
-Check the starter example: [@itenisz/gatsby-starter-theme-vidyaa](https://github.com/itenisz/gatsby-themes/tree/master/examples/gatsby-starter-theme-vidyaa)
+Check it on the starter example.
 
 ### Theme options
 
@@ -116,15 +136,15 @@ Check the starter example: [@itenisz/gatsby-starter-theme-vidyaa](https://github
 | `pathMdxPages`       | `content/pages`                | Location of mdx dirs for pages (src/pages)                                                    |
 | `pathMdxMain`        | `content/pages/main`           | Location of index page mdx dirs                                                               |
 | `pathMdxBlog`        | `content/pages/blog`           | Location of blog pages mdx dirs                                                               |
-| `pathTranslations`   | `content/translations`          | Location of translation subdiretories with files                                             |
+| `pathTranslations`   | `content/translations`          | Location of translation subdirectories with files                                             |
 | `pathImages`         | `static/images`                | Location of image files for `use-gatsby-images` hook                                          |
 | `mdx`                | `true`                         | Configure `gatsby-plugin-mdx` (if you already using the plugin pass `false` to turn this off) |
 | `cfgImages`          | array of objects               | If you want to use direct links without using gatsby image engine, from cfg-images.js file    |
 | `cfgLanguages`       | object                         | Main language configuration object, from cfg-languages.js file                                |
 
-The theme creates default dirs, if not available. (dir creation written in Gatsby node config file)
+The theme creates default directories, if not available. (directory creation written in Gatsby node config file)
 
-The usage of `content/pages/blog` is optional. If no mdx file is found inside, the list will be empty. 
+The usage of `content/pages/blog` is optional. If no mdx file is found inside, the list will be empty.
 
 The blog page design is very basic, it is still in development. Of course you can write your own blog page with page shadowing, and the theme handle the language and mdx files.
 
@@ -133,7 +153,7 @@ You need to shadow the `src/hooks/use-gatsby-images` hook, if you want to use yo
 
 Optionally you can set every image name and src trough `cfgImages` theme option as array of objects. The best method for this, to shadow the config file located at `src/config/cfg-images`, and use your own setup in the shadowed file.
 
-- The img name string are used in components. With your own components you can setup different names, but watch out for Typescript interface definiton located in `src/types/type-cfg-images`
+- The img name string are used in components. With your own components you can setup different names, but watch out for Typescript interface definition located in `src/types/type-cfg-images`
 - All the image src default value is an empty string
 - If src is empty string, `src/hooks/use-gatsby-images` hook image data used (sharp generated image from GraphQL)
 - If src string is available, then `src/hooks/use-cfg-images` hook get the values, and set the image component link directly
@@ -218,7 +238,7 @@ module.exports = {
 
 The `siteMetadata` default values come from `config/cfg-languages`, you can find the example of setup in the starter example.
 
-I dont use it in the SEO component because multilingual SEO requires all the data for all the languages, so the SEO data source is `config/cfg-languages`
+I don't use it in the SEO component because multilingual SEO requires all the data for all the languages, so the SEO data source is `config/cfg-languages`
 
 Offline Support & WebApp Manifest config example in the starter too.
 
@@ -292,11 +312,11 @@ transPages:
 
 #### add mdx block to main page
 
-At default this is a onepage concept called `main`, which consists of different mdx files reading as blocks with `mdx-page` component.
+At default this is a `onepage` concept called `main`, which consists of different mdx files reading as blocks with `mdx-page` component.
 Inside `content/main` you need to create a directory for each mdx page, example `content/main/about`. Inside your page directory there need to be an mdx file for each language, named like `index.en.mdx`, `index.hu.mdx` etc.
 
 The `mdx-page` component reading your mdx and put in the content to a box. So you can read multiple mdx content to one page, to load in different blocks.
-The index page contains threee mdx source: about, prices and contact.
+The index page contains three mdx source: about, prices and contact.
 
 Adding content to main page:
 
@@ -319,7 +339,7 @@ Adding content to blog page:
 Slugs come from frontmatter title, this way there are different slugs for each localized title. Different slugs for all the translations.
 The change between different slugs is handled by `src/hooks/use-slugs` hook.
 
-Please be aware, that dont use the same slug for different posts or pages, because that cause a conflict, and just one will be generated.
+Please be aware, don't use the same slug for different posts or pages, because that cause a conflict, and just one will be generated.
 So the title should be unique per language.
 
 **Frontmatter reference:**

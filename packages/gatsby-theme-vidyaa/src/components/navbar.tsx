@@ -7,14 +7,14 @@ import ReactFlagsSelect from 'react-flags-select'
 import useSlugs from '../hooks/use-slugs'
 import LayoutContext from '../contexts/layout-context'
 import { refactorByKeyValue, getPathPage, getPathFromHref } from '../utils/general-helpers'
-import NavGetLinks from './nav-get-links'
 import ImgLogoNavbar from './img-logo-navbar'
 
 type navbarType = {
   children: React.ReactNode
+  needNavbarLogo?: boolean
 }
 
-const Navbar = ({ children }: navbarType) => {
+const Navbar = ({ children, needNavbarLogo = true }: navbarType) => {
   const { locale, defaultLanguage, configLanguages } = React.useContext(LayoutContext)
   const flagCountries = configLanguages.map((item: any) => item.flagCountry)
   const flagLabels = refactorByKeyValue(configLanguages, `flagCountry`, `flagLabel`)
@@ -69,7 +69,7 @@ const Navbar = ({ children }: navbarType) => {
             flexBasis: `auto`,
           }}
         >
-          <ImgLogoNavbar />
+          {needNavbarLogo ? <ImgLogoNavbar /> : null}
         </Flex>
         <Flex
           as="nav"

@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Box, Styled } from 'theme-ui'
+import theme from '../gatsby-plugin-theme-ui'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { LayoutPages } from '../components/layout-pages'
@@ -10,7 +11,7 @@ const Post = ({ data: { mdx } }: any) => (
   <LayoutPages withScrollSpy={false} pageGroupName="blog">
     <Box id="mdx_post" sx={{ variant: `layout.blogpage` }}>
       <Box id="top">
-        <ParallaxHeader height="75vh" />
+        <ParallaxHeader height={theme.parallax.heightHeader} />
       </Box>
       <Container>
         <Box id="mdxrenderer_post" sx={{ variant: `mdx.boxpost` }}>
