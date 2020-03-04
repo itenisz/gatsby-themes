@@ -104,7 +104,7 @@ yarn add @itenisz/gatsby-theme-vidyaa
 ### Install with the example starter
 
 ```sh
-yarn add @itenisz/gatsby-starter-theme-vidyaa
+gatsby new gatsby-starter-theme-vidyaa https://github.com/itenisz/gatsby-starter-theme-vidyaa
 ```
 
 ## Usage
