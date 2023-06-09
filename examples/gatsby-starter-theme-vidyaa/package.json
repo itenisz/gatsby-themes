@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@itenisz/gatsby-theme-vidyaa": "^0.8.7",
-    "gatsby": "^2.19.5",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-manifest": "^2.2.37",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-robots-txt": "^1.5.0",
